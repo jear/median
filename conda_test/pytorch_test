@@ -1,3 +1,6 @@
 (py36-cuda10.2) jear@worker-gpu-7:~$ mkdir -p workspace/github && cd workspace/github
 (py36-cuda10.2) jear@worker-gpu-7:~/workspace/github$ git clone https://github.com/jear/median.git
 (py36-cuda10.2) jear@worker-gpu-7:~/workspace/github/median/conda_test$ pip install -r pipfreeze_danny.txt 
+
+ERROR: Could not find a version that satisfies the requirement imagecodecs==2021.1.11
+ERROR: No matching distribution found for imagecodecs==2021.1.11
