@@ -1,27 +1,25 @@
-
-
-Install Anaconda
-
+## Install Anaconda
+```
 (base) jear@worker-gpu-7:~$ bash Anaconda3-2020.11-Linux-x86_64.sh
-
+```
  
 
-Create a python 3.6 venv
-
+## Create a python 3.6 venv
+```
 (base) jear@worker-gpu-7:~$ conda create --name pytorch python=3.6
-
+```
  
 
-Activate
-
+## Activate
+```
 (base) jear@worker-gpu-7:~$ conda activate py36-cuda10.2
-
+```
  
 
-          Install cuda toolkit and pytorch
-
+          ## Install cuda toolkit and pytorch
+```
           (py36-cuda10.2) jear@worker-gpu-7:~$ conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
-
+```
  
 
           Test #1 :
