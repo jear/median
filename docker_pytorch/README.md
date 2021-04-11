@@ -1,8 +1,9 @@
-## Pytorch
-https://github.com/pytorch/pytorch/tree/master/docker/pytorch/ubuntu_cpu_gpu
+## From Pytorch
+Source : https://github.com/pytorch/pytorch/tree/master/docker/pytorch/ubuntu_cpu_gpu
 
 
-## Nvidia 
+## From Nvidia 
+Source : https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/Detection/SSD#training-performance-benchmark
 ```
 nvidia-docker run --rm -it --ulimit memlock=-1 --ulimit stack=67108864 -v $COCO_DIR:/coco --ipc=host nvidia_ssd
 
