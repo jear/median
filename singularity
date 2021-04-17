@@ -1,0 +1,43 @@
+```
+https://sylabs.io/guides/3.7/user-guide/quick_start.html#quick-installation-steps
+
+sudo apt-get update && sudo apt-get install -y     build-essential     libssl-dev     uuid-dev     libgpgme11-dev     squashfs-tools     libseccomp-dev     wget     pkg-config     git     cryptsetup
+
+# install Go
+export VERSION=1.14.12 OS=linux ARCH=amd64 && \  # Replace the values as needed
+echo 'export PATH=/usr/local/go/bin:$PATH' >> ~/.bashrc &&   source ~/.bashrc
+
+# Download and compile
+export VERSION=3.7.0 && # adjust this as necessary     wget https://github.com/hpcng/singularity/releases/download/v${VERSION}/singularity-${VERSION}.tar.gz &&     tar -xzf singularity-${VERSION}.tar.gz &&     cd singularity
+./mconfig &&     make -C builddir &&     sudo make -C builddir install
+
+# Test
+singularity help
+singularity --debug run library://sylabsed/examples/lolcow
+singularity run --containall library://sylabsed/examples/lolcow
+
+singularity pull docker://nvcr.io/nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
+
+singularity exec --nv docker://nvcr.io/nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04 /usr/bin/nvidia-smi
+INFO:    Using cached SIF image
+Sat Apr 17 20:25:10 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.102.04   Driver Version: 450.102.04   CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  A100-PCIE-40GB      On   | 00000000:61:00.0 Off |                    0 |
+| N/A   59C    P0    40W / 250W |      0MiB / 40537MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+```
