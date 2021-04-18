@@ -13,7 +13,7 @@ https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html
  sudo apt install gcc make 
  sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"sudo bash -c "echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
  sudo bash -c "echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf"
- update-initramfs -u 
+ sudo update-initramfs -u 
  sudo update-initramfs -u 
  sudo reboot
  
