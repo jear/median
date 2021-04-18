@@ -31,6 +31,8 @@ sudo reboot
 
  nvidia-smi topo -m
  /usr/bin/nv-fabricmanager --version
+ Fabric Manager version is : 450.102.04
+
  sudo systemctl status nvidia-fabricmanager.service
  sudo systemctl start nvidia-fabricmanager.service
  sudo systemctl status nvidia-fabricmanager.service
