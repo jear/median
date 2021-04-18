@@ -1,3 +1,6 @@
+WORK IN PROGRESS
+
+
 https://github.com/pytorch/pytorch/tree/master/torch/distributed/benchmarks
 
 ## Slurm + Singularity + distributed pytorch ( 2 GPU )
