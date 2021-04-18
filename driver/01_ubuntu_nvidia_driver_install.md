@@ -1,3 +1,9 @@
+Install ubuntu 20.04 LTS :
+- HWE 
+- kernel param : nomodeset fsck.mode=skip pci=realloc=off
+- openssh server
+
+
 ```
  BASE_URL=https://us.download.nvidia.com/tesla
  DRIVER_VERSION=450.80.02
