@@ -31,10 +31,10 @@ set -x
 srun singularity exec --nv $SINGULARITY_ALLOWED_DIR/my-container_GPU.sif python ./my_model.py
 ```
 
-## examples
+## Slurm + Singularity + distributed pytorch ( 2 GPU )
 https://qywu.github.io/2020/12/09/aws-slumr-pytorch.html
 
-## another one
+## Example with local SSD
 https://xstream.stanford.edu/docs/singularity/
 
 Below is an example of SLURM batch script to execute TensorFlow within Singularity to train the CIFAR-10 model on a single GPU. The example also makes use of the local SSD ($LSTOR) available on the compute nodes to speed up processing of all the small images.
