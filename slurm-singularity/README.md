@@ -31,9 +31,6 @@ set -x
 srun singularity exec --nv $SINGULARITY_ALLOWED_DIR/my-container_GPU.sif python ./my_model.py
 ```
 
-## Slurm + Singularity + distributed pytorch ( 2 GPU )
-https://qywu.github.io/2020/12/09/aws-slumr-pytorch.html
-
 ## Example with local SSD
 https://xstream.stanford.edu/docs/singularity/
 
