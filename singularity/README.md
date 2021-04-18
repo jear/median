@@ -1,9 +1,9 @@
 
 ### Source for the test
- https://sylabs.io/guides/3.7/user-guide/quick_start.html#quick-installation-steps
- https://sylabs.io/guides/3.7/user-guide/singularity_and_docker.html
- https://sylabs.io/guides/3.7/user-guide/gpu.html
- https://developer.nvidia.com/blog/how-to-run-ngc-deep-learning-containers-with-singularity/
+# https://sylabs.io/guides/3.7/user-guide/quick_start.html#quick-installation-steps
+# https://sylabs.io/guides/3.7/user-guide/singularity_and_docker.html
+# https://sylabs.io/guides/3.7/user-guide/gpu.html
+# https://developer.nvidia.com/blog/how-to-run-ngc-deep-learning-containers-with-singularity/
 
 
 ### To be tested
