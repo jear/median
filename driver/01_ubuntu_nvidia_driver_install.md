@@ -34,6 +34,8 @@ sudo reboot
  sudo systemctl status nvidia-fabricmanager.service
  sudo systemctl start nvidia-fabricmanager.service
  sudo systemctl status nvidia-fabricmanager.service
+ 
+ 
  sudo apt-get install -y libnvidia-nscq-450
  ls -ol /usr/lib/x86_64-linux-gnu/libnvidia-nscq*
   
