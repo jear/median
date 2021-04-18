@@ -34,8 +34,8 @@ cuda-drivers-fabricmanager-450 | 450.51.06-1 | http://developer.download.nvidia.
  curl -fSsl -O $BASE_URL/$DRIVER_VERSION/NVIDIA-Linux-x86_64-$DRIVER_VERSION.run
 
 
- chmod +x NVIDIA-Linux-x86_64-450.80.02.run 
- sudo ./NVIDIA-Linux-x86_64-450.80.02.run 
+ chmod +x NVIDIA-Linux-x86_64-$DRIVER_VERSION.run
+ sudo ./NVIDIA-Linux-x86_64-$DRIVER_VERSION.run
  
  nvidia-smi 
  nvidia-smi  topo -m
