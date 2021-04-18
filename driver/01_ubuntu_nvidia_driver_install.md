@@ -3,8 +3,8 @@ Install ubuntu 20.04 LTS :
 - kernel param : nomodeset fsck.mode=skip pci=realloc=off
 - openssh server
 
-https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html
-https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html
+- https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html
+- https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html
 
 ```
  BASE_URL=https://us.download.nvidia.com/tesla
