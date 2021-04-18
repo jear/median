@@ -3,9 +3,6 @@ Install ubuntu 20.04 LTS :
 - kernel param : nomodeset fsck.mode=skip pci=realloc=off
 - openssh server
 
-- https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html
-- https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html
-
 
 ```
 /!\  Warning, do not install nvidia driver, do not blacklist nouveau... the following will do it for you.
@@ -65,3 +62,5 @@ nvidia-bug-report.sh     nvidia-cuda-mps-server   nvidia-modprobe          nvidi
 
 
 ``` 
+- https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html
+- https://docs.nvidia.com/datacenter/tesla/hgx-software-guide/index.html
