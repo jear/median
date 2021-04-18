@@ -30,5 +30,28 @@ set -x
 srun singularity exec --nv $SINGULARITY_ALLOWED_DIR/my-container_GPU.sif python ./my_model.py
 ```
 
-## Other examples
+## examples
 https://qywu.github.io/2020/12/09/aws-slumr-pytorch.html
+
+## another one
+https://xstream.stanford.edu/docs/singularity/
+```
+#!/bin/bash
+#SBATCH --job-name=cifar10_1gpu
+#SBATCH --output=slurm_cifar10_1gpu_%j.out
+#SBATCH --cpus-per-task=1
+#SBATCH --gres gpu:1
+#SBATCH --time=1:00:00
+
+TF_IMG=tensorflow-latest-gpu.img
+CIFAR10_DIR=$WORK/tensorflow/cifar10
+
+mkdir $LSTOR/cifar10_data
+cp -v cifar-10-binary.tar.gz $LSTOR/cifar10_data/
+
+module load singularity
+
+srun singularity exec --home $WORK:/home --bind $LSTOR:/tmp --nv $TF_IMG \
+    python $CIFAR10_DIR/cifar10_train.py --batch_size=128 \
+                                         --max_steps=100000
+```
