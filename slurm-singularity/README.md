@@ -27,7 +27,8 @@ module load singularity
 set -x
 
 # exÃ©cution du code depuis espace dâ€™exÃ©cution autorisÃ© avec l'option --nv afin de prendre en compte les cartes NVIDIA
-srun singularity exec --nv $SINGULARITY_ALLOWED_DIR/my-container_GPU.sif python ./my_model.py```
+srun singularity exec --nv $SINGULARITY_ALLOWED_DIR/my-container_GPU.sif python ./my_model.py
+```
 
 ## Other examples
 https://qywu.github.io/2020/12/09/aws-slumr-pytorch.html
