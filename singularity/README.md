@@ -7,8 +7,8 @@
 
 
 # To be tested
-https://github.com/manuel-munoz-aguirre/singularity-pytorch-gpu
-https://github.com/avolkov1/helper_scripts_for_containers
-https://hpc.nih.gov/apps/singularity.html
+    https://github.com/manuel-munoz-aguirre/singularity-pytorch-gpu
+    https://github.com/avolkov1/helper_scripts_for_containers
+    https://hpc.nih.gov/apps/singularity.html
 
 
