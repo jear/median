@@ -1,6 +1,11 @@
 ```
 https://sylabs.io/guides/3.7/user-guide/quick_start.html#quick-installation-steps
 
+https://developer.nvidia.com/blog/how-to-run-ngc-deep-learning-containers-with-singularity/
+
+https://qywu.github.io/2020/12/09/aws-slumr-pytorch.html
+
+
 sudo apt-get update && sudo apt-get install -y     build-essential     libssl-dev     uuid-dev     libgpgme11-dev     squashfs-tools     libseccomp-dev     wget     pkg-config     git     cryptsetup
 
 # install Go
@@ -16,6 +21,8 @@ singularity help
 singularity --debug run library://sylabsed/examples/lolcow
 singularity run --containall library://sylabsed/examples/lolcow
 
+
+# NGC
 singularity pull docker://nvcr.io/nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
 
 singularity exec --nv docker://nvcr.io/nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04 /usr/bin/nvidia-smi
@@ -40,4 +47,9 @@ Sat Apr 17 20:25:10 2021
 |=============================================================================|
 |  No running processes found                                                 |
 +-----------------------------------------------------------------------------+
+
+
+
+
+
 ```
