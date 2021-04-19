@@ -1,4 +1,4 @@
-## Install docker
+## Install nvidia-docker
 Source: https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#nvidia-drivers
 
 ## From Nvidia 
