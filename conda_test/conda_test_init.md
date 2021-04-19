@@ -9,7 +9,7 @@ logout/login
 
 ## Create a python 3.6 venv
 ```
-(base) jear@worker-gpu-7:~$ conda create --name pytorch python=3.6
+(base) jear@worker-gpu-7:~$ conda create --name py36-cuda10.2 python=3.6
 ```
  
 
