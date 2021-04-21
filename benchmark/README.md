@@ -25,4 +25,29 @@ loading annotations into memory...
 Done (t=0.64s)
 creating index...
 index created!
+
+
+...
+
+
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.24894
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.42059
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.25627
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.07379
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.26865
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.40180
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.23537
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.34204
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.35817
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.11574
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.39158
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.55408
+Current AP: 0.24894
+DLL 2021-04-20 11:16:48.691423 - (64,) mAP : 0.24894283339490403 
+DLL 2021-04-20 11:16:48.691518 - () total time : 44247.04624032974 
+DLL 2021-04-20 11:16:48.691536 - () mAP : 0.24894283339490403 
+
+12 hours on a DL380 with 1 A100 40GB 
+
 ```
