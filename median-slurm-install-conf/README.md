@@ -37,7 +37,27 @@ flush privileges;
 exit 
 
  
+sudo -i
+cd /storage
+
+wget https://download.schedmd.com/slurm/slurm-20.02.5.tar.bz2 
+tar xvjf slurm-20.02.5.tar.bz2 
+cd slurm-20.02.5/ 
+./configure --prefix=/tmp/slurm-build --sysconfdir=/etc/slurm --enable-pam --with-pam_dir=/lib/x86_64-linux-gnu/security/ --without-shared-libslurm 
+make && make contrib && make install 
+
+cd ..
+
+sudo fpm -s dir -t deb -v 1.0 -n slurm-20.02.5 --prefix=/usr -C /tmp/slurm-build . 
+sudo dpkg -i slurm-20.02.5_1.0_amd64.deb 
+
+sudo mkdir -p /etc/slurm /etc/slurm/prolog.d /etc/slurm/epilog.d /var/spool/slurm/ctld /var/spool/slurm/d /var/log/slurm 
+sudo chown slurm /var/spool/slurm/ctld /var/spool/slurm/d /var/log/slurm 
 
 
+git clone https://github.com/jear/median.git
+
+sudo cp /storage/median/slurmdbd.service /etc/systemd/system/ 
+sudo cp /storage/median/slurmctld.service /etc/systemd/system/ 
 
 ```
