@@ -66,17 +66,17 @@ sudo cp /storage/median/median-slurm-install-conf/conf/slurmctld.service /etc/sy
 sudo cp /storage/median/median-slurm-install-conf/conf/slurmdbd.conf /etc/slurm/ 
 sudo cp /storage/median/median-slurm-install-conf/conf/slurm.conf /etc/slurm/ 
 
-sudo systemctl stop slurmdbd 
-
-sudo systemctl daemon-reload 
 sudo systemctl enable slurmdbd 
-sudo systemctl start slurmdbd 
-sudo systemctl status slurmdbd 
+sudo systemctl enable slurmctld 
 
+sudo systemctl stop slurmdbd 
 sudo systemctl stop slurmctld 
 
 sudo systemctl daemon-reload 
-sudo systemctl enable slurmctld 
+sudo systemctl start slurmdbd 
+sudo systemctl status slurmdbd 
+
+sudo systemctl daemon-reload 
 sudo systemctl start slurmctld 
 sudo systemctl status slurmctld 
 
