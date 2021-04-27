@@ -57,6 +57,9 @@ sudo chown slurm /var/spool/slurm/ctld /var/spool/slurm/d /var/log/slurm
 
 git clone https://github.com/jear/median.git
 
+grep -i pass median/median-slurm-install-conf/conf/slurmdbd.conf
+StoragePass=change_me
+
 sudo cp /storage/median/median-slurm-install-conf/conf/slurmdbd.service /etc/systemd/system/ 
 sudo cp /storage/median/median-slurm-install-conf/conf/slurmctld.service /etc/systemd/system/ 
 
@@ -66,10 +69,12 @@ sudo cp /storage/median/median-slurm-install-conf/conf/slurm.conf /etc/slurm/
 sudo systemctl daemon-reload 
 sudo systemctl enable slurmdbd 
 sudo systemctl start slurmdbd 
+sudo systemctl status slurmdbd 
 
 sudo systemctl daemon-reload 
 sudo systemctl enable slurmctld 
 sudo systemctl start slurmctld 
+sudo systemctl status slurmctld 
 
  
 
