@@ -1,3 +1,5 @@
+Slurm master node install
+
 ```
 sudo adduser -u 1111 munge --disabled-password --gecos ""
 sudo adduser -u 1121 slurm --disabled-password --gecos ""
@@ -21,7 +23,20 @@ sudo apt-get install git gcc make ruby ruby-dev libpam0g-dev libmariadb-client-l
 
 sudo gem install fpm 
 
+# Ubuntu 18
+sudo systemctl enable mariadb 
+sudo systemctl start mariadb
+sudo mysql -u root 
 
+create database slurm_acct_db; 
+create user 'slurm'@'localhost'; 
+set password for 'slurm'@'localhost' = password('change_me'); 
+grant usage on *.* to 'slurm'@'localhost'; 
+grant all privileges on slurm_acct_db.* to 'slurm'@'localhost'; 
+flush privileges; 
+exit 
+
+ 
 
 
 
