@@ -60,6 +60,9 @@ git clone https://github.com/jear/median.git
 grep -i pass median/median-slurm-install-conf/conf/slurmdbd.conf
 StoragePass=change_me
 
+grep ControlMachine /etc/slurm/slurm.conf
+ControlMachine=slurm18
+
 sudo cp /storage/median/median-slurm-install-conf/conf/slurmdbd.service /etc/systemd/system/ 
 sudo cp /storage/median/median-slurm-install-conf/conf/slurmctld.service /etc/systemd/system/ 
 
@@ -79,6 +82,11 @@ sudo systemctl status slurmdbd
 sudo systemctl daemon-reload 
 sudo systemctl start slurmctld 
 sudo systemctl status slurmctld 
+
+ ll /run/slurm*
+-rw-r--r-- 1 slurm root 6 Apr 27 21:40 /run/slurmctld.pid
+-rw-r--r-- 1 slurm root 6 Apr 27 21:40 /run/slurmdbd.pid
+
 
  
 
