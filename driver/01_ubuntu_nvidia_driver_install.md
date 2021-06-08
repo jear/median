@@ -3,6 +3,9 @@ Install ubuntu 20.04 LTS :
 - kernel param : nomodeset fsck.mode=skip pci=realloc=off
 - openssh server
 
+The following is an example using the Ubuntu packages
+
+Another way is to use runfiles provided by nvidia, for all linux distros...
 
 ```
 /!\  Warning, do not install nvidia driver, do not blacklist nouveau... the following will do it for you.
